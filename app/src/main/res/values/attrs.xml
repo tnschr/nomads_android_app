@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="onWindowColorPrimary" format="color"/>
+    <attr name="onWindowColorSecondary" format="color"/>
+
+    <attr name="rippleColorPrimary" format="color"/>
+    <attr name="rippleColorSecondary" format="color"/>
+
+    <attr name="onWindowColorPrimaryInverse" format="color"/>
+
+    <attr name="errorColor" format="color"/>
+    <attr name="successColor" format="color"/>
+
+    <attr name="statusColor" format="color"/>
+    <attr name="secondaryColorAccent" format="color"/>
+
+    <attr name="dialogBackgroundColor" format="color"/>
+
+</resources>
