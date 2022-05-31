@@ -8,7 +8,7 @@
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
 
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:animateLayoutChanges="true">
@@ -17,7 +17,8 @@
             android:theme="?actionBarTheme"
             android:id="@+id/toolBar_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent">
 
             <androidx.appcompat.widget.Toolbar
                 android:theme="@style/Style.Toolbar.Light"
@@ -30,12 +31,23 @@
 
         <FrameLayout
             android:id="@+id/frame_layout"
-            android:layout_width="240dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="start"
             android:fitsSystemWindows="true" />
 
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_add_client"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_add"
+           android:backgroundTint="@color/app_blue_primary"
+            app:tint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="16dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>>
 
     <FrameLayout
         android:id="@+id/frame_layout_menu"
@@ -43,13 +55,6 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
-        android:background="#FF0000"/>
-
-  <!--  <com.google.android.material.navigation.NavigationView
-        android:id="@+id/navigation_view"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"/>-->
-
+        android:background="#FFFFFF"/>
 
 </androidx.drawerlayout.widget.DrawerLayout>
