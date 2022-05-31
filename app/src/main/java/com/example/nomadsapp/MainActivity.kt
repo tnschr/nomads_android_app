@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportFragmentManager.beginTransaction().add(R.id.frame_layout, RecommendedTripFragment()).commit()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setSupportActionBar(binding.toolBar)
@@ -40,6 +41,5 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, AddClientActivity::class.java)
             startActivity(intent)
         }
-        supportFragmentManager.beginTransaction().add(R.id.frame_layout, RecommendedTripFragment()).commit()
     }
 }

@@ -8,11 +8,10 @@
         android:id="@+id/edit_text_first_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
+        android:ems="9"
         android:hint="First Name"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="88dp"/>
 
@@ -20,37 +19,86 @@
         android:id="@+id/edit_text_last_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
+        android:ems="9"
         android:hint="Last Name"
         android:inputType="textPersonName"
         app:layout_constraintTop_toBottomOf="@id/edit_text_first_name"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp"/>
 
     <EditText
         android:id="@+id/edit_text_hotel_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
+        android:ems="9"
         android:hint="Hotel Name"
         android:inputType="text"
         android:layout_marginTop="16dp"
         app:layout_constraintTop_toBottomOf="@id/edit_text_last_name"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_text_new_trip_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:ems="9"
+        android:hint="New Trip Number"
+        android:inputType="textPersonName"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_new_hotel_name"
+        app:layout_constraintStart_toEndOf="@id/edit_text_trip_number"/>
 
     <EditText
         android:id="@+id/edit_text_trip_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
+        android:ems="9"
         android:hint="Trip Number"
         android:inputType="text"
         android:layout_marginTop="16dp"
         app:layout_constraintTop_toBottomOf="@id/edit_text_hotel_name"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_text_new_first_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:layout_marginStart="4dp"
+        android:ems="9"
+        android:hint="New First Name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/edit_text_first_name"/>
+
+    <EditText
+        android:id="@+id/edit_text_new_last_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:ems="9"
+        android:hint="New Last Name"
+        android:inputType="textPersonName"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_new_first_name"
+        app:layout_constraintStart_toEndOf="@id/edit_text_last_name"/>
+
+    <EditText
+        android:id="@+id/edit_text_new_hotel_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:ems="9"
+        android:hint="New Hotel Name"
+        android:inputType="textPersonName"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_new_last_name"
+        app:layout_constraintStart_toEndOf="@id/edit_text_hotel_name"/>
 
     <Button
         android:id="@+id/button_insert_client"
@@ -60,8 +108,64 @@
         android:background="@color/app_blue_primary"
         android:textColor="@color/white"
         android:layout_marginTop="8dp"
+        android:layout_marginStart="4dp"
         app:layout_constraintTop_toBottomOf="@id/edit_text_trip_number"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button_update_client"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ανανεωση πελατη"
+        android:background="@color/app_blue_primary"
+        android:textColor="@color/white"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/button_insert_client"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_new_trip_number"
+        app:layout_constraintBottom_toBottomOf="@id/button_insert_client"/>
+
+    <Button
+        android:id="@+id/button_delete_client"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Διαγραφη πελατη"
+        android:background="@color/app_blue_primary"
+        android:textColor="@color/white"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/button_insert_client"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/text_view_client_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ΣΤΟΙΧΕΙΑ ΠΕΛΑΤΩΝ"
+        style="@style/Font.Normal"
+        android:textColor="@color/app_blue_primary"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_delete_client"/>
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_view_client_details">
+
+        <TextView
+            android:id="@+id/text_view_clients"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Font.Normal"
+            android:textColor="@color/black"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="4dp"/>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

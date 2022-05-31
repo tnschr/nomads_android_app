@@ -22,7 +22,6 @@ class MenuFragment: Fragment() {
         return binding.root
 
         binding.textViewRecommendedTrips.setOnClickListener {
-            Log.e("test","plzzz")
           requireActivity().supportFragmentManager.beginTransaction()
               .replace(R.id.menu_container, RecommendedTripFragment()).commit()
         }

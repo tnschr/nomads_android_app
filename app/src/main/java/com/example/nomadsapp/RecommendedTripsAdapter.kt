@@ -12,7 +12,6 @@ class RecommendedTripsAdapter(
 
     private var binding = RecyclerViewRecommendedTripsBinding.inflate(layoutInflater)
 
-
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
