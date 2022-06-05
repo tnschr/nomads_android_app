@@ -25,18 +25,26 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityMainBinding
 
+    /* η onCreate() είναι η πρώτη μέθοδος που καλείται σύμφωνα με το lifecycle του android στις
+    activities και στην οποια αρχικοποιούμε το activity  */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         supportFragmentManager.beginTransaction().add(R.id.frame_layout, RecommendedTripFragment()).commit()
         binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-        setSupportActionBar(binding.toolBar)
+        setContentView(binding.root) //εδω οριζουμε το layout με το οποιο ειναι συνδεδεμενη η κλάση στην περιπτωση μας το activity_main.xml
+        setSupportActionBar(binding.toolBar) //θετουμε το toolbar περνώντας το με id που του εχουμε δωσει μεσα στο xml
 
+
+        //δημιουργουμε εναν click listener για το μενου που βρισκεται αριστερα
         binding.toolBar.setNavigationOnClickListener{
             supportFragmentManager.beginTransaction().add(R.id.frame_layout_menu,MenuFragment() ).commit()
+            /*με ην βοηθεια του supportFragmentManager αντικαθιστουμε
+            το framelayout που εχουμε στο activity main με το fragment του μενου */
             binding.drawerLayout.openDrawer(GravityCompat.START)
         }
 
+        /* δημιουργουμε ενα click listener για το κουυμπι κατω δεξια και θετουμε στο intent
+        την AddClientActivity και μεσω του startActivity ανοιγει η AddClientActivity  */
         binding.fabAddClient.setOnClickListener{
             val intent = Intent(this, AddClientActivity::class.java)
             startActivity(intent)
