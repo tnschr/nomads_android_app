@@ -12,6 +12,7 @@ class RecommendedTripsAdapter(
 
     private var binding = RecyclerViewRecommendedTripsBinding.inflate(layoutInflater)
 
+    /* δινει το recyclerview στο layout*/
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
@@ -30,6 +31,8 @@ class RecommendedTripsAdapter(
         return tripsItem.size
     }
 
+    /* δημιουργουμε εναν viewHolder στον οποιο για καθε row του recyclerview δινει τα δεδομενα σε
+    * component*/
     inner class RecommendedTripViewHolder(
         var binding: RecyclerViewRecommendedTripsBinding
     ): RecyclerView.ViewHolder(binding.root){

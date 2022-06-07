@@ -20,6 +20,7 @@ import java.lang.StringBuilder
 class AddClientActivity: AppCompatActivity() {
 
     lateinit var binding: ActivityAddClientBinding
+    //δημιουργια collection Client στην Firestore
     private val clientCollectionRef = Firebase.firestore.collection("clients")
 
     override fun onCreate(savedInstanceState: Bundle?) {

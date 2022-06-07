@@ -21,6 +21,7 @@ class MenuFragment: Fragment() {
         binding = FragmentMenuBinding.inflate(layoutInflater)
         return binding.root
 
+        //δεν παιρνει το click
         binding.textViewRecommendedTrips.setOnClickListener {
           requireActivity().supportFragmentManager.beginTransaction()
               .replace(R.id.menu_container, RecommendedTripFragment()).commit()

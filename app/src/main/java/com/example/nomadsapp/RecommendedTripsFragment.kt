@@ -11,6 +11,7 @@ class RecommendedTripFragment: Fragment() {
 
     var binding: FragmentRecommendedTripsBinding?= null
 
+    // η μεθοδος onCreateView ειναι η πρωτη που καλειται συμφωνα με το lifecycle του fragment η οποια αρχικοποιει το layout
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
